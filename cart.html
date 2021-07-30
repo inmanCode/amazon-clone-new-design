@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cart</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="bg-white w-full">
+      <div class="header h-16 bg-gray-900 flex items-center">
+        <a href="index.html" class="w-1/5 h-16 ml-10">
+          <div class="logo">
+            <img
+              class="w-28 h-16 object-contain"
+              src="https://press.aboutamazon.com/sites/g/files/knoqqb37121/themes/site/nir_pid2497/styleguide/media/logo.svg"
+              alt=""
+            /></div
+        ></a>
+        <input
+          type="text"
+          id="search"
+          class="
+            h-9
+            w-60
+            bg-gray-800
+            border border-gray-500 border-opacity-75
+            rounded-l-xl
+            px-3
+            text-white
+            ml-6
+            focus:outline-none
+            placeholder-white
+          "
+          placeholder="Search..."
+        />
+        <div
+          class="
+            categoies
+            h-9
+            w-30
+            bg-gray-800
+            border border-gray-500 border-opacity-75
+            px-3
+            text-white
+            flex
+            items-center
+            justify-between
+            cursor-pointer
+          "
+        >
+          Categories
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-4 w-4"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M19 9l-7 7-7-7"
+            />
+          </svg>
+        </div>
+        <div
+          class="
+            search_icon
+            bg-yellow-500
+            h-9
+            w-10
+            text-white
+            rounded-r-xl
+            flex
+            items-center
+            justify-center
+            cursor-pointer
+          "
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-5 w-5"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+            />
+          </svg>
+        </div>
+        <!-- Right icons -->
+        <div
+          class="
+            icons
+            text-white
+            flex
+            items-center
+            ml-auto
+            mr-8
+            w-48
+            h-16
+            justify-around
+          "
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-5 w-5"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
+            />
+          </svg>
+
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-5 w-5"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"
+            />
+          </svg>
+          <svg
+            class="h-12 w-12 rounded-full"
+            data-jdenticon-value="jessy"
+          ></svg>
+        </div>
+      </div>
+      <!-- Main -->
+      <div class="main h-screen flex bg-gray-100">
+        <div
+          class="main_sidebar w-1/5 bg-gray-900 border-t-2 border-gray-700 p-6"
+        >
+          <div class="sidebar_categories">
+            <div
+              class="
+                main_sidebar_category
+                text-yellow-500
+                cursor-pointer
+                flex
+                items-center
+                font-bold
+                bg-gray-700
+                p-2
+                rounded-lg
+                mb-3
+              "
+            >
+              <span class="w-10"
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-6 w-6"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"
+                  />
+                </svg>
+              </span>
+              <span> Categories </span>
+            </div>
+            <div
+              class="
+                sidebar_main_category
+                mb-3
+                p2
+                text-white
+                cursor-pointer
+                flex
+                items-center
+              "
+            >
+              <span class="w-12"></span>
+              <span>Kindle</span>
+            </div>
+            <div
+              class="
+                sidebar_main_category
+                mb-3
+                p2
+                text-white
+                cursor-pointer
+                flex
+                items-center
+              "
+            >
+              <span class="w-12"></span>
+              <span>Echo and Alexa</span>
+            </div>
+            <div
+              class="
+                sidebar_main_category
+                mb-3
+                p2
+                text-white
+                cursor-pointer
+                flex
+                items-center
+              "
+            >
+              <span class="w-12"></span>
+              <span>Kindle</span>
+            </div>
+            <div
+              class="
+                sidebar_main_category
+                mb-3
+                p2
+                text-white
+                cursor-pointer
+                flex
+                items-center
+              "
+            >
+              <span class="w-12"></span>
+              <span>Books</span>
+            </div>
+            <div
+              class="
+                sidebar_main_category
+                mb-3
+                p2
+                text-white
+                cursor-pointer
+                flex
+                items-center
+              "
+            >
+              <span class="w-12"></span>
+              <span>Electronics</span>
+            </div>
+            <div
+              class="
+                sidebar_main_category
+                mb-3
+                p2
+                text-white
+                cursor-pointer
+                flex
+                items-center
+              "
+            >
+              <span class="w-12"></span>
+              <span>Home and Garden</span>
+            </div>
+            <div
+              class="
+                sidebar_main_category
+                mb-3
+                p2
+                text-white
+                cursor-pointer
+                flex
+                items-center
+              "
+            >
+              <span class="w-12"></span>
+              <span>Fashion</span>
+            </div>
+            <div
+              class="
+                sidebar_main_category
+                mb-3
+                p2
+                text-white
+                cursor-pointer
+                flex
+                items-center
+                font-bold
+                hover:bg-gray-700
+                p-2
+                rounded-lg
+              "
+            >
+              <span class="w-10"><i class="fas fa-percent"></i></span
+              ><span>Sell on Amazon</span>
+            </div>
+            <div
+              class="
+                sidebar_main_category
+                mb-3
+                p2
+                text-white
+                cursor-pointer
+                flex
+                items-center
+                font-bold
+                hover:bg-gray-700
+                p-2
+                rounded-lg
+              "
+            >
+              <span class="w-10"><i class="fas fa-question-circle"></i></span
+              ><span>Help</span>
+            </div>
+          </div>
+        </div>
+        <div class="main_section flex-1 p-6 bg-white">
+          <h1 class="tetx-gray-400 text-3xl font-bold mb-6">Shopping Cart</h1>
+          <div class="table_titles flex font-bold text-gray-400">
+            <h2 class="flex-grow">Product</h2>
+            <h2 class="w-48">Count</h2>
+            <h2 class="w-48">Total Cost</h2>
+            <span class="w-10"></span>
+          </div>
+          <div class="cart_items mt-5">
+            <div
+              class="cart_item flex items-center pb-4 border-b border-gray-100"
+            >
+              <div class="item_img w-40 h-24 bg-white p-4 rounded-lg">
+                <img
+                  class="w-full h-full object-contain"
+                  src="https://m.media-amazon.com/images/I/81mSAyJNl-L._AC_SL1500_.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="cart_item_details flex-grow">
+                <div class="item_title font-bold text-sm text-gray-600">
+                  Apple Macbook pro 13
+                </div>
+                <div class="item_brand text-sm text-gray-400">Apple</div>
+              </div>
+              <div class="cart_item_counter w-48 flex items-center">
+                <div
+                  class="
+                    chavon_left
+                    cursor-pointer
+                    text-gray-400
+                    bg-gray-100
+                    rounded
+                    h-6
+                    w-6
+                    flex
+                    items-center
+                    justify-center
+                    hover:bg-gray-200
+                    mr-2
+                  "
+                >
+                  <i class="fas fa-chevron-left fa-xs"></i>
+                </div>
+                <h4 class="text-gray-400">x1</h4>
+                <div
+                  class="
+                    chavon_right
+                    cursor-pointer
+                    text-gray-400
+                    bg-gray-100
+                    rounded
+                    h-6
+                    w-6
+                    flex
+                    items-center
+                    justify-center
+                    hover:bg-gray-200
+                    ml-2
+                  "
+                >
+                  <i class="fas fa-chevron-right fa-xs"></i>
+                </div>
+              </div>
+              <div class="cart_item_cost w-48 font-bold text-gray-500">
+                1,738.00€
+              </div>
+              <div
+                class="
+                  cart_item_delete
+                  w-10
+                  font-bold
+                  text-gray-400
+                  cursor-pointer
+                  hover:text-gray-500
+                "
+              >
+                <i class="fas fa-times fa-xs"></i>
+              </div>
+            </div>
+            <div
+              class="cart_item flex items-center pb-4 border-b border-gray-100"
+            >
+              <div class="item_img w-40 h-24 bg-white p-4 rounded-lg">
+                <img
+                  class="w-full h-full object-contain"
+                  src="https://m.media-amazon.com/images/I/81mSAyJNl-L._AC_SL1500_.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="cart_item_details flex-grow">
+                <div class="item_title font-bold text-sm text-gray-600">
+                  Apple Macbook pro 13
+                </div>
+                <div class="item_brand text-sm text-gray-400">Apple</div>
+              </div>
+              <div class="cart_item_counter w-48 flex items-center">
+                <div
+                  class="
+                    chavon_left
+                    cursor-pointer
+                    text-gray-400
+                    bg-gray-100
+                    rounded
+                    h-6
+                    w-6
+                    flex
+                    items-center
+                    justify-center
+                    hover:bg-gray-200
+                    mr-2
+                  "
+                >
+                  <i class="fas fa-chevron-left fa-xs"></i>
+                </div>
+                <h4 class="text-gray-400">x1</h4>
+                <div
+                  class="
+                    chavon_right
+                    cursor-pointer
+                    text-gray-400
+                    bg-gray-100
+                    rounded
+                    h-6
+                    w-6
+                    flex
+                    items-center
+                    justify-center
+                    hover:bg-gray-200
+                    ml-2
+                  "
+                >
+                  <i class="fas fa-chevron-right fa-xs"></i>
+                </div>
+              </div>
+              <div class="cart_item_cost w-48 font-bold text-gray-500">
+                1,738.00€
+              </div>
+              <div
+                class="
+                  cart_item_delete
+                  w-10
+                  font-bold
+                  text-gray-400
+                  cursor-pointer
+                  hover:text-gray-500
+                "
+              >
+                <i class="fas fa-times fa-xs"></i>
+              </div>
+            </div>
+          </div>
+          <div class="complete_order flex justify-end mt-10">
+            <div class="total_cost mr-7">
+              <h2 class="text-gray-500">Total Cost</h2>
+              <div class="total_cost font-bold text-3xl text-gray-600">
+                1,777.00€
+              </div>
+            </div>
+            <div
+              class="
+                complete_order_btn
+                flex
+                items-center
+                justify-center
+                w-56
+                bg-yellow-500
+                rounded
+                text-white
+                cursor-pointer
+                hover:bg-yellow-600
+                font-bold
+              "
+            >
+              Complete Order
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/jdenticon@3.1.0/dist/jdenticon.min.js"
+      async
+      integrity="sha384-VngWWnG9GS4jDgsGEUNaoRQtfBGiIKZTiXwm9KpgAeaRn6Y/1tAFiyXqSzqC8Ga/"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
