@@ -2,3 +2,7 @@
   margin: 0;
   padding: 0;
 }
+.main_section_banner {
+  background-image: url('https://images-eu.ssl-images-amazon.com/images/G/29/digital/video/gateway/placement/launch/Jolt/JOLT_2021_GWBleedingHero_ENG_COVIDUPDATE_XSite_1500X600_PV_it-IT._CB663024837_.jpg');
+  background-size: cover;
+}
