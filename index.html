@@ -38,7 +38,6 @@
             rounded-l-xl
             px-3
             text-white
-            ml-6
             focus:outline-none
             placeholder-white
           "
@@ -163,9 +162,7 @@
                   justify-center
                   text-gray-800 text-xs
                 "
-              >
-                1
-              </div>
+              ></div>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 class="h-5 w-5"
@@ -407,7 +404,7 @@
                 />
               </svg>
             </h1>
-            <div class="categories mt-5 flex items-center">
+            <div class="categories flex items-center">
               <div
                 class="
                   icon_desktop
@@ -419,7 +416,8 @@
                   flex
                   items-center
                   justify-center
-                  ml-6
+                  mr-6
+                  mt-5
                   text-gray-500
                 "
               >
@@ -449,7 +447,8 @@
                   flex
                   items-center
                   justify-center
-                  ml-6
+                  mr-6
+                  mt-5
                   text-gray-500
                 "
               >
@@ -479,7 +478,8 @@
                   flex
                   items-center
                   justify-center
-                  ml-6
+                  mr-6
+                  mt-5
                   text-gray-500
                 "
               >
@@ -509,7 +509,8 @@
                   flex
                   items-center
                   justify-center
-                  ml-6
+                  mr-6
+                  mt-5
                   text-gray-500
                 "
               >
@@ -539,7 +540,8 @@
                   flex
                   items-center
                   justify-center
-                  ml-6
+                  mr-6
+                  mt-5
                   text-gray-500
                 "
               >
@@ -569,7 +571,8 @@
                   flex
                   items-center
                   justify-center
-                  ml-6
+                  mr-6
+                  mt-5
                   text-gray-500
                 "
               >
@@ -596,29 +599,9 @@
               </div>
             </div>
           </div>
-          <div class="main_section_deals mt-10">
+          <div class="main_section_deals mt-5">
             <h1 class="text-2xl font-bold text-gray-700 mb-5">Hot deals 🔥</h1>
-            <div class="main_section_products">
-              <div class="main_product">
-                <div class="product_image w-48 h-23 bg-white rounded-lg">
-                  <img
-                    class="w-full f-full object-contain p-4"
-                    src="https://m.media-amazon.com/images/I/81mSAyJNl-L._AC_SL1500_.jpg"
-                    alt=""
-                  />
-                </div>
-                <div class="product_name text-gray-700 font-bold mt-2 text-sm">
-                  HP - Gaming Pavilion 15
-                </div>
-                <div class="poduct_make text-green-700">HP</div>
-                <div class="product_rate text-yellow-300 my-1">
-                  ⭐⭐⭐⭐ 4.5
-                </div>
-                <div class="product_price text-gray-700 text-lg font-bold">
-                  229.00€
-                </div>
-              </div>
-            </div>
+            <div class="main_section_products"></div>
           </div>
         </div>
       </div>
@@ -629,5 +612,18 @@
       integrity="sha384-VngWWnG9GS4jDgsGEUNaoRQtfBGiIKZTiXwm9KpgAeaRn6Y/1tAFiyXqSzqC8Ga/"
       crossorigin="anonymous"
     ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/jdenticon@3.1.0/dist/jdenticon.min.js"
+      async
+      integrity="sha384-VngWWnG9GS4jDgsGEUNaoRQtfBGiIKZTiXwm9KpgAeaRn6Y/1tAFiyXqSzqC8Ga/"
+      crossorigin="anonymous"
+    ></script>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-firestore.js"></script>
+    <script src="firebase.js"></script>
+    <script src="script.js"></script>
+    <script src="Header.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/numeral.js/2.0.6/numeral.min.js"></script>
   </body>
 </html>
